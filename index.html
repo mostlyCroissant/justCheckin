@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
   <title>Just Checkin'</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<div class="app">
-<img src="images/header.png">
-  <header class="header">
-    <h1 id="eventTitle">Event Name</h1>
-  </header>
+  <div class="app">
+    <img src="images/header.png">
+    <header class="header">
+      <h1 id="eventTitle">Event Name</h1>
+    </header>
 
-  <input id="search" placeholder="Search guest..." class="search"/>
+    <input id="search" placeholder="Search guest..." class="search" />
 
-  <h2>Guests</h2>
-  <div id="guestList"></div>
+    <div class="section-header">
+      <h2>Guests</h2>
+      <div id="counter" class="counter">0 / 0</div>
+    </div>
+    <div id="guestList"></div>
 
-  <h2>Checked in</h2>
-  <div id="checkedList"></div>
+    <h2>Checked in</h2>
+    <div id="checkedList"></div>
 
-</div>
+  </div>
 
-<script src="config.js"></script>
-<script src="app.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
 
 </body>
+
 </html>

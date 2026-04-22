@@ -40,6 +40,10 @@ function render() {
 
   renderList("guestList", unchecked, false);
   renderList("checkedList", checked, true);
+  const total = guests.length;
+  const checkedCount = guests.filter(g => g.checked_in_at).length;
+  document.getElementById("counter").textContent =
+  `${checkedCount} / ${total}`;
 }
 
 function renderList(id, list, isChecked) {
