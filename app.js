@@ -1,14 +1,26 @@
 let guests = [];
+let isSyncing = false;
 
 async function load() {
-  const res = await fetch(CONFIG.URL);
-  const data = await res.json();
-  guests = data.guests || [];
+  if (isSyncing) return;
+  isSyncing = true;
 
-  if (data.meta && data.meta.event_name) {
-    document.getElementById("eventTitle").textContent = data.meta.event_name;
+  try {
+    const res = await fetch(CONFIG.URL);
+    const data = await res.json();
+
+    guests = data.guests || [];
+
+    if (data.meta && data.meta.event_name) {
+      document.getElementById("eventTitle").textContent = data.meta.event_name;
+    }
+
+    render();
+  } catch (err) {
+    console.error("Sync failed:", err);
+  } finally {
+    isSyncing = false;
   }
-  render();
 }
 
 function buildSearchString(g) {
@@ -87,3 +99,4 @@ function checkIn(id) {
 document.getElementById("search").addEventListener("input", render);
 
 load();
+setInterval(load, 5000);
