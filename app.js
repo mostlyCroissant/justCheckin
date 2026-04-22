@@ -99,4 +99,4 @@ function checkIn(id) {
 document.getElementById("search").addEventListener("input", render);
 
 load();
-setInterval(load, 15000);
+setInterval(load, 10000);
