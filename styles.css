@@ -35,17 +35,20 @@ h2 {
   margin: 0;
 }
 .search {
+  position: sticky;
+  top: 8px;
+  z-index: 20;
   width: 86%;
   max-width: 500px;
-  margin: 12px auto; /* centers horizontally */
+  margin: 12px auto 16px;
   display: block;
   padding: 14px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   border: 1px solid #eee;
   background: #fff;
   font-size: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .row {
