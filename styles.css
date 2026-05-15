@@ -104,22 +104,22 @@ button {
 }
 
 /* Role colors */
-.role-Guest {
+.role-guest {
   color: #1c75bc;
-  background: rgba(198, 17, 26, 0.1);
+  background: rgba(176, 176, 176, 0.1);
 }
 
-.role-Judge {
+.role-judge {
   color: #9e1f63;
-  background: rgba(0, 102, 204, 0.1);
+  background: rgba(176, 176, 176, 0.1);
 }
 
-.role-Organizer {
+.role-organizer {
   color: #a97c50;
-  background: rgba(122, 60, 255, 0.1);
+  background: rgba(176, 176, 176, 0.1);
 }
 
-.role-Startup {
+.role-startup {
   color: #ef4136;
-  background: rgba(0, 128, 96, 0.1);
+  background: rgba(176, 176, 176, 0.1);
 }
