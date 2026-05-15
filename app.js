@@ -31,9 +31,12 @@ function buildSearchString(g) {
     " " +
     (g.last_name || "") +
     " " +
-    (g.email || "")
+    (g.email || "") +
+    " " +
+    (g.role || "")
   ).toLowerCase();
 }
+
 
 function displayName(g) {
   if (g.name) return g.name;
@@ -68,10 +71,18 @@ function renderList(id, list, isChecked) {
       const div = document.createElement("div");
       div.className = "row " + (isChecked ? "checked" : "");
 
+      const role = g.role || "";
+      const roleClass = role
+        ? "role-tag role-" + role.toLowerCase().replace(/\s+/g, "-")
+        : "";
+
       div.innerHTML = `
-            <span>${displayName(g)}</span>
-            <button onclick="checkIn('${g.guest_id}')">✓</button>
-          `;
+        <div class="guest-info">
+          <span class="guest-name">${displayName(g)}</span>
+          ${role ? `<span class="${roleClass}">${role}</span>` : ""}
+        </div>
+        <button onclick="checkIn('${g.guest_id}')">&#10003;</button>
+      `;
 
       el.appendChild(div);
     });

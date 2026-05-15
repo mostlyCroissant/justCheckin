@@ -82,3 +82,44 @@ button {
   border-radius: 5px;
   padding: 12px 40px;
 }
+
+.guest-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.guest-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.role-tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Role colors */
+.role-Guest {
+  color: #1c75bc;
+  background: rgba(198, 17, 26, 0.1);
+}
+
+.role-Judge {
+  color: #9e1f63;
+  background: rgba(0, 102, 204, 0.1);
+}
+
+.role-Organizer {
+  color: #a97c50;
+  background: rgba(122, 60, 255, 0.1);
+}
+
+.role-Startup {
+  color: #ef4136;
+  background: rgba(0, 128, 96, 0.1);
+}
